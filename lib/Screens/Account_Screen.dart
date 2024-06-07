@@ -1,7 +1,9 @@
 
 
 import 'package:bricksnmix/Custom_Widget/CustomTextformfield.dart';
+import 'package:bricksnmix/Custom_Widget/ElevatedButtun.dart';
 import 'package:bricksnmix/Custom_Widget/GoogleCustomwidget.dart';
+import 'package:bricksnmix/Screens/order/orderSummery.dart';
 import 'package:flutter/material.dart';
 
 class CreateAccount extends StatefulWidget {
@@ -128,14 +130,18 @@ class _CreateAccountState extends State<CreateAccount> {
 
               Container(
                 width: 300,
-                child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 235, 94, 39), // background
-                        foregroundColor: Colors.white, // foreground
-                    ),
-                    onPressed: () {},
-                    child: Text('SIGN UP'),
-                ),
+                child:
+                //  ElevatedButton(
+                //     style: ElevatedButton.styleFrom(
+                //         backgroundColor: Color.fromARGB(255, 235, 94, 39), // background
+                //         foregroundColor: Colors.white, // foreground
+                //     ),
+                //     onPressed: () {},
+                //     child: Text('SIGN UP'),
+                // ),
+                CustomElevatedButton(bText: 'SIGN UP', onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => OrderSummary(),));
+                })
               ),
 
               Text("or sign up with"),
